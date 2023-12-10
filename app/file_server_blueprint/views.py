@@ -70,7 +70,7 @@ def download_file():
     if os.path.exists(file_path):
         return send_file(open(file_path, 'rb'), as_attachment=True, download_name='Без названия')
     else:
-        return '', 404
+        return 'File does not exist', 404
 
 
 @file_server_blueprint.route('/delete', methods=['GET'])
