@@ -50,11 +50,17 @@ postgres=postgresql://username:password@localhost/postgres
 ```
 
 Также в postgres необходимо будет создать две таблицы: File и User
+
 Столбцы для User:
+
 id - serial, not null, primary_key
+
 name - character_varying
 
 Столбцы для File
+
 id - serial, not null, primary_key
+
 filename - character_varying
+
 user_id - foreign_key по id из таблицы User
